@@ -4,16 +4,22 @@ import { actors } from '../data';
 const Actors = () => {
 
 
-  const actorCards = () => {
-    return(
-      actors.map((actor, index) => {
-        
+  const actorCards = actors.map((actor, index) => {
+      return(
         <div key={index} className="actor">
-          <h3>actor.name</h3>
+          <h3>{actor.name}</h3>
+            <ul>
+            {actor.movies.map((movie, index) => {
+              return (
+                <li key={index}>{movie}</li>
+              )
+            })}
+            </ul> 
+         
         </div>
-      }))
-      
-  }
+        )
+      })
+  
   
 
 
@@ -23,6 +29,7 @@ const Actors = () => {
           {actorCards}
       </div>
   );
+
 };
 
 export default Actors;
