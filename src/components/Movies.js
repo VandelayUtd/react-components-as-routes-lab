@@ -5,18 +5,18 @@ const Movies = () => {
   return (
     <div>
         <h1>Movies Page</h1>
-          {movies.map((movie, index) => {
+          {movies.map((movie, index) => (
             <div key={index}>
               <h3>{movie.title}</h3>
               <p>{movie.time}</p>
               <p>{movie.metascore}</p>
               <ul>
-                {movie.genres.map((genre, index) => {
+                {movie.genres.map((genre, index) => (
                   <li key={index}>{genre}</li>
-                })}
+                ))}
                 </ul>
             </div>
-          })}
+          ))}
     </div>
   );
 };

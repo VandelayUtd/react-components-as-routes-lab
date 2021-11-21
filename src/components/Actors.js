@@ -3,17 +3,10 @@ import { actors } from '../data';
 
 const Actors = () => {
 
-  const actorCards = actors.map((actor, index) => {
-    <div key={index}>
-      <h3>{actor.name}</h3>
-      <p>Movies</p>
-        <ul>
-          {actor.movies.map((movie, index) => {
-            <li key={index}>{movie}</li>
-          })}
-        </ul>
-    </div>
-  })
+
+  const actorCards = () => actors.map((actor, index) => <h3>{actor.name}</h3>)
+  
+
 
   return (
       <div>
